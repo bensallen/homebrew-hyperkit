@@ -29,9 +29,9 @@ class Hyperkit < Formula
     ENV["OPAMROOT"] = buildpath/"opamroot"
     ENV["OPAMYES"] = "1"
     system "opam", "init", "--no-setup"
-    system "opam", "install", "uri", "qcow.0.10.0", "qcow-tool",
-                   "mirage-block-unix.2.7.0", "conf-libev", "logs", "fmt",
-                   "mirage-unix", "prometheus-app"
+    system "opam", "install", "uri", "qcow.0.10.3", "conduit.1.0.0", "lwt.3.1.0", "qcow-tool",        
+                              "mirage-block-unix.2.7.0", "conf-libev", "logs", "fmt", 
+                              "mirage-unix", "prometheus-app"
 
     # update the Makefile to set version to X.YYYYmmdd (sha1)
     if build.head?
